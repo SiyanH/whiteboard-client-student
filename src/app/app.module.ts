@@ -9,13 +9,15 @@ import {LessonServiceClient} from './services/LessonServiceClient';
 import {CourseTableComponent} from './components/course-table/course-table.component';
 import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
 import { ModuleListComponent } from './components/module-list/module-list.component';
+import { LessonTabsComponent } from './components/lesson-tabs/lesson-tabs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CourseTableComponent,
     PageNotFoundComponent,
-    ModuleListComponent
+    ModuleListComponent,
+    LessonTabsComponent
   ],
   imports: [
     BrowserModule,
