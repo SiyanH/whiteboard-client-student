@@ -10,6 +10,7 @@ import {CourseTableComponent} from './components/course-table/course-table.compo
 import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
 import { ModuleListComponent } from './components/module-list/module-list.component';
 import { LessonTabsComponent } from './components/lesson-tabs/lesson-tabs.component';
+import { CourseViewerComponent } from './components/course-viewer/course-viewer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LessonTabsComponent } from './components/lesson-tabs/lesson-tabs.compon
     CourseTableComponent,
     PageNotFoundComponent,
     ModuleListComponent,
-    LessonTabsComponent
+    LessonTabsComponent,
+    CourseViewerComponent
   ],
   imports: [
     BrowserModule,

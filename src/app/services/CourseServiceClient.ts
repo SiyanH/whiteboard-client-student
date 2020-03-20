@@ -9,5 +9,11 @@ export class CourseServiceClient {
 
   findCourseById = (cid) =>
     fetch(`${API_URL_COURSE}/${cid}`)
-      .then(response => response.json());
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          return null;
+        }
+      });
 }
