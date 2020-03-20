@@ -6,12 +6,14 @@ import {AppComponent} from './app.component';
 import {CourseServiceClient} from './services/CourseServiceClient';
 import {ModuleServiceClient} from './services/ModuleServiceClient';
 import {LessonServiceClient} from './services/LessonServiceClient';
-import { CourseTableComponent } from './components/course-table/course-table.component';
+import {CourseTableComponent} from './components/course-table/course-table.component';
+import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CourseTableComponent
+    CourseTableComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
