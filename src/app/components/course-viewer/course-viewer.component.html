@@ -1,14 +1,14 @@
-<div class="container wbdv-course-viewer">
-  <h2 class="d-flex align-items-center">
+<div class="container">
+  <h3 class="d-flex align-items-center wbdv-header">
     <i class="fas fa-times fa-sm mt-1 mr-3 close float-left wbdv-close" routerLink="/table/courses"
        title="Close" role="button"></i>
-    <div>{{courseTitle}}</div>
-  </h2>
+    <div class="text-overflow-hidden">{{courseTitle}}</div>
+  </h3>
   <div class="row">
-    <div class="col-4">
+    <div class="col-sm-4 wbdv-module-list">
       <app-module-list></app-module-list>
     </div>
-    <div class="col-8">
+    <div class="col-sm-8 wbdv-lesson-tabs">
       <app-lesson-tabs></app-lesson-tabs>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <ul *ngIf="moduleId !== undefined && lessons.length > 0" class="nav nav-tabs">
-  <li *ngFor="let lesson of lessons" class="nav-item">
-    <a class="nav-link" [class]="{'active': lessonId === lesson._id}"
+  <li *ngFor="let lesson of lessons" class="nav-item text-overflow-hidden">
+    <a class="nav-link text-overflow-hidden" [class]="{'active': lessonId === lesson._id}"
        routerLink="/table/courses/{{courseId}}/modules/{{moduleId}}/lessons/{{lesson._id}}/topics">
       {{lesson.title}}
     </a>

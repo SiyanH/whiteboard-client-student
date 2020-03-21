@@ -11,6 +11,8 @@ const routes: Routes = [
   {path: 'table/courses/:cid/modules', component: CourseViewerComponent},
   {path: 'table/courses/:cid/modules/:mid', component: CourseViewerComponent},
   {path: 'table/courses/:cid/modules/:mid/lessons', component: CourseViewerComponent},
+  {path: 'table/courses/:cid/modules/:mid/lessons/:lid', component: CourseViewerComponent},
+  {path: 'table/courses/:cid/modules/:mid/lessons/:lid/topics', component: CourseViewerComponent},
   {path: 'error', component: PageNotFoundComponent},
   {path: '', redirectTo: '/table/courses', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent}

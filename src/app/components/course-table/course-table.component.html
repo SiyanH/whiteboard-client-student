@@ -1,7 +1,8 @@
 <div class="container wbdv-course-table">
   <ul class="list-group">
     <li class="list-group-item">Course</li>
-    <li *ngFor="let course of courses" class="list-group-item list-group-item-action">
+    <li *ngFor="let course of courses"
+        class="list-group-item list-group-item-action text-overflow-hidden">
       <i class="fas fa-file-alt text-primary wbdv-icon"></i>
       <a routerLink="/table/courses/{{course._id}}/modules">{{course.title}}</a>
     </li>
