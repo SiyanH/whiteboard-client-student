@@ -12,6 +12,7 @@ import {ModuleListComponent} from './components/module-list/module-list.componen
 import {LessonTabsComponent} from './components/lesson-tabs/lesson-tabs.component';
 import {CourseViewerComponent} from './components/course-viewer/course-viewer.component';
 import {QuizzesComponent} from './components/quizzes/quizzes.component';
+import {QuizComponent} from './components/quiz/quiz.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {QuizzesComponent} from './components/quizzes/quizzes.component';
     ModuleListComponent,
     LessonTabsComponent,
     CourseViewerComponent,
-    QuizzesComponent
+    QuizzesComponent,
+    QuizComponent
   ],
   imports: [
     BrowserModule,
