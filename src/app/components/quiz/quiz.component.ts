@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import {QuizServiceClient} from '../../services/quiz.service.client';
+import {QuestionServiceClient} from '../../services/question.service.client';
 
 @Component({
   selector: 'app-quiz',
