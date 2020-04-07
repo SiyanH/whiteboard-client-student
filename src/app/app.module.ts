@@ -8,9 +8,10 @@ import {ModuleServiceClient} from './services/ModuleServiceClient';
 import {LessonServiceClient} from './services/LessonServiceClient';
 import {CourseTableComponent} from './components/course-table/course-table.component';
 import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
-import { ModuleListComponent } from './components/module-list/module-list.component';
-import { LessonTabsComponent } from './components/lesson-tabs/lesson-tabs.component';
-import { CourseViewerComponent } from './components/course-viewer/course-viewer.component';
+import {ModuleListComponent} from './components/module-list/module-list.component';
+import {LessonTabsComponent} from './components/lesson-tabs/lesson-tabs.component';
+import {CourseViewerComponent} from './components/course-viewer/course-viewer.component';
+import {QuizzesComponent} from './components/quizzes/quizzes.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CourseViewerComponent } from './components/course-viewer/course-viewer.
     PageNotFoundComponent,
     ModuleListComponent,
     LessonTabsComponent,
-    CourseViewerComponent
+    CourseViewerComponent,
+    QuizzesComponent
   ],
   imports: [
     BrowserModule,

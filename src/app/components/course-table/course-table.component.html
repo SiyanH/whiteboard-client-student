@@ -4,7 +4,8 @@
     <li *ngFor="let course of courses"
         class="list-group-item list-group-item-action text-overflow-hidden">
       <i class="fas fa-file-alt text-primary wbdv-icon"></i>
-      <a routerLink="/table/courses/{{course._id}}/modules">{{course.title}}</a>
+      <a routerLink="{{course._id}}/modules">{{course.title}}</a>
+      <a class="float-right" routerLink="{{course._id}}/quizzes">Quizzes</a>
     </li>
   </ul>
 </div>

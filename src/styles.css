@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+.wbdv-header {
+  margin-top: 18px;
+  margin-bottom: 20px;
+}
+
 .text-overflow-hidden {
   overflow: hidden;
   text-overflow: ellipsis;
