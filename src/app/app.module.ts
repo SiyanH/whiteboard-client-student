@@ -13,6 +13,7 @@ import {LessonTabsComponent} from './components/lesson-tabs/lesson-tabs.componen
 import {CourseViewerComponent} from './components/course-viewer/course-viewer.component';
 import {QuizzesComponent} from './components/quizzes/quizzes.component';
 import {QuizComponent} from './components/quiz/quiz.component';
+import {TrueFalseQuestionComponent} from './components/true-false-question/true-false-question.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {QuizComponent} from './components/quiz/quiz.component';
     LessonTabsComponent,
     CourseViewerComponent,
     QuizzesComponent,
-    QuizComponent
+    QuizComponent,
+    TrueFalseQuestionComponent
   ],
   imports: [
     BrowserModule,
