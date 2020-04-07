@@ -14,6 +14,7 @@ import {CourseViewerComponent} from './components/course-viewer/course-viewer.co
 import {QuizzesComponent} from './components/quizzes/quizzes.component';
 import {QuizComponent} from './components/quiz/quiz.component';
 import {TrueFalseQuestionComponent} from './components/true-false-question/true-false-question.component';
+import {MultipleChoiceQuestionComponent} from './components/multiple-choice-question/multiple-choice-question.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {TrueFalseQuestionComponent} from './components/true-false-question/true-
     CourseViewerComponent,
     QuizzesComponent,
     QuizComponent,
-    TrueFalseQuestionComponent
+    TrueFalseQuestionComponent,
+    MultipleChoiceQuestionComponent
   ],
   imports: [
     BrowserModule,
