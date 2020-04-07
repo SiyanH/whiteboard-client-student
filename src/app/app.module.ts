@@ -15,6 +15,8 @@ import {QuizzesComponent} from './components/quizzes/quizzes.component';
 import {QuizComponent} from './components/quiz/quiz.component';
 import {TrueFalseQuestionComponent} from './components/true-false-question/true-false-question.component';
 import {MultipleChoiceQuestionComponent} from './components/multiple-choice-question/multiple-choice-question.component';
+import {QuizServiceClient} from './services/quiz.service.client';
+import {QuestionServiceClient} from './services/question.service.client';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import {MultipleChoiceQuestionComponent} from './components/multiple-choice-ques
   providers: [
     CourseServiceClient,
     ModuleServiceClient,
-    LessonServiceClient
+    LessonServiceClient,
+    QuizServiceClient,
+    QuestionServiceClient
   ],
   bootstrap: [AppComponent]
 })
