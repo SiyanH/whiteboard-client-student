@@ -1,1 +1,38 @@
-<p>true-false-question works!</p>
+<h4 class="d-flex align-items-center justify-content-between">
+  {{question.question}}
+  <i *ngIf="grading && answer === question.correct" class="fas fa-check fa-sm text-success"></i>
+  <i *ngIf="grading && answer !== question.correct" class="fas fa-times fa-sm text-danger"></i>
+</h4>
+<ul class="list-group">
+  <li [ngClass]="{'list-group-item-success': grading && question.correct === 'true',
+      'list-group-item-danger': grading && answer === 'true' && answer !== question.correct}"
+      class="list-group-item">
+    <div class="d-flex align-items-center justify-content-between">
+      <div class="wbdv-radio d-flex align-items-center">
+        <input [(ngModel)]="answer" [disabled]="grading"
+               id="{{question._id}}_t" name="{{question._id}}" type="radio" value="true"/>
+        <label for="{{question._id}}_t">TRUE</label>
+      </div>
+      <i *ngIf="grading && question.correct === 'true'" class="fas fa-check"></i>
+      <i *ngIf="grading && answer === 'true' && answer !== question.correct"
+         class="fas fa-times"></i>
+    </div>
+  </li>
+  <li [ngClass]="{'list-group-item-success': grading && question.correct == 'false',
+      'list-group-item-danger': grading && answer === 'false' && answer !== question.correct}"
+      class="list-group-item">
+    <div class="d-flex align-items-center justify-content-between">
+      <div class="wbdv-radio d-flex align-items-center">
+        <input [(ngModel)]="answer" [disabled]="grading"
+               id="{{question._id}}_f" name="{{question._id}}" type="radio" value="false"/>
+        <label for="{{question._id}}_f">FALSE</label>
+      </div>
+      <i *ngIf="grading && question.correct == 'false'" class="fas fa-check"></i>
+      <i *ngIf="grading && answer === 'false' && answer !== question.correct"
+         class="fas fa-times mr-1"></i>
+    </div>
+  </li>
+</ul>
+<div class="wbdv-answer">Your answer: {{answer}}</div>
+<button (click)="grade()" class="btn btn-success btn-sm">Grade</button>
+

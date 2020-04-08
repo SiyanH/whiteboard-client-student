@@ -13,6 +13,7 @@ export class TrueFalseQuestionComponent implements OnInit {
   @Input()
   question = {_id: '', title: '', question: '', answer: '', correct: ''};
   grading = false;
+  answer = null;
 
   grade = () => { this.grading = true; };
 
