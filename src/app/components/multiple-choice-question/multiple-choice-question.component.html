@@ -1,1 +1,23 @@
-<p>multiple-choice-question works!</p>
+<h4 class="d-flex align-items-center justify-content-between">
+  {{question.question}}
+  <i *ngIf="grading && answer === question.correct" class="fas fa-check fa-sm text-success"></i>
+  <i *ngIf="grading && answer !== question.correct" class="fas fa-times fa-sm text-danger"></i>
+</h4>
+<ul class="list-group">
+  <li *ngFor="let choice of question.choices; index as i"
+      [ngClass]="{'list-group-item-success': grading && choice === question.correct,
+      'list-group-item-danger': grading && answer === choice && answer !== question.correct}"
+      class="list-group-item">
+    <div class="d-flex align-items-center justify-content-between">
+      <div class="wbdv-radio d-flex align-items-center">
+        <input [(ngModel)]="answer" [disabled]="grading"
+               id="{{question._id}}_{{i}}" name="{{question._id}}" type="radio" value="{{choice}}"/>
+        <label for="{{question._id}}_{{i}}">{{choice}}</label>
+      </div>
+      <i *ngIf="grading && choice === question.correct" class="fas fa-check"></i>
+      <i *ngIf="grading && answer === choice && answer !== question.correct" class="fas fa-times mr-1"></i>
+    </div>
+  </li>
+</ul>
+<div class="wbdv-answer">Your answer: {{answer}}</div>
+<button (click)="grade()" class="btn btn-success btn-sm">Grade</button>

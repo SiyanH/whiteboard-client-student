@@ -12,6 +12,7 @@ export class MultipleChoiceQuestionComponent implements OnInit {
   @Input()
   question = {_id: '', title: '', question: '', choices: [], correct: '', answer: ''};
   grading = false;
+  answer = null;
 
   grade = () => { this.grading = true; };
 
