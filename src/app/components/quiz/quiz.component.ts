@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {QuizServiceClient} from '../../services/quiz.service.client';
 import {QuestionServiceClient} from '../../services/question.service.client';
 
@@ -12,14 +12,24 @@ export class QuizComponent implements OnInit {
 
   constructor(private quizService: QuizServiceClient,
               private questionService: QuestionServiceClient,
-              private route: ActivatedRoute) {
+              private route: ActivatedRoute,
+              private router: Router) {
   }
 
+  courseId = ''
+  quizId = '';
   quizTitle = '';
   questions = [];
 
+  submitQuiz = () => {
+    this.quizService.submitQuiz(this.quizId, this.questions);
+    this.router.navigate([`/table/courses/${this.courseId}/quizzes`]);
+  };
+
   ngOnInit(): void {
     this.route.params.subscribe(params => {
+      this.courseId = params.cid;
+      this.quizId = params.qid;
       this.quizService.findQuizById(params.qid)
         .then(quiz => this.quizTitle = quiz.title);
       this.questionService.findQuestionsForQuiz(params.qid)

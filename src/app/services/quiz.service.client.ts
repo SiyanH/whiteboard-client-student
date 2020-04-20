@@ -9,4 +9,12 @@ export class QuizServiceClient {
   findQuizById = (qid) =>
     fetch(`${API_URL_QUIZZES}/${qid}`)
       .then(response => response.json());
+  submitQuiz = (qid, questions) =>
+    fetch(`${API_URL_QUIZZES}/${qid}/attempts`, {
+      method: 'POST',
+      body: JSON.stringify(questions),
+      headers: {
+        'content-type': 'application/json'
+      }
+    }).then(response => response.json());
 }
