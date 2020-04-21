@@ -3,11 +3,11 @@
   <ul class="list-group">
     <li *ngFor="let quiz of quizzes"
         class="list-group-item">
-      <a routerLink="{{quiz._id}}" class="mr-3 d-flex align-items-center">{{quiz.title}}</a>
+      <a class="mr-3 d-flex align-items-center" routerLink="{{quiz._id}}">{{quiz.title}}</a>
       <div class="wbdv-quiz-attempts text-muted">
         Attempts: {{quiz.attempts?.length}}
         <br>
-        Scores:
+        Scores: <span *ngIf="quiz.attempts?.length === 0">N/A</span>
         <ul>
           <li *ngFor="let attempt of quiz.attempts">{{attempt.score}}%</li>
         </ul>
