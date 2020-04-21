@@ -2,9 +2,17 @@
   <h2 class="wbdv-header">Quizzes</h2>
   <ul class="list-group">
     <li *ngFor="let quiz of quizzes"
-        class="list-group-item d-flex align-items-center justify-content-between">
-      <a routerLink="{{quiz._id}}" class="mr-3">{{quiz.title}}</a>
-      <a class="btn btn-primary btn-sm" routerLink="{{quiz._id}}">Start</a>
+        class="list-group-item">
+      <a routerLink="{{quiz._id}}" class="mr-3 d-flex align-items-center">{{quiz.title}}</a>
+      <div class="wbdv-quiz-attempts text-muted">
+        Attempts: {{quiz.attempts?.length}}
+        <br>
+        Scores:
+        <ul>
+          <li *ngFor="let attempt of quiz.attempts">{{attempt.score}}%</li>
+        </ul>
+        <a class="btn btn-primary btn-sm float-right" routerLink="{{quiz._id}}">Start</a>
+      </div>
     </li>
   </ul>
 </div>

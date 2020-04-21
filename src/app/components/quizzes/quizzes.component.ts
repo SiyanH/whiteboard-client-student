@@ -19,7 +19,18 @@ export class QuizzesComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.courseId = params.cid;
       this.service.findAllQuizzes()
-        .then(quizzes => this.quizzes = quizzes);
+        .then(quizzes => {
+          this.quizzes = quizzes;
+          return quizzes.map(quiz => this.service.findAttemptsForQuiz(quiz._id));
+        })
+        .then(attemptPromises =>
+          Promise.all(attemptPromises)
+        )
+        .then(attempts => {
+          for (let i = 0; i < this.quizzes.length; i++) {
+            this.quizzes[i].attempts = attempts[i];
+          }
+        });
     });
   }
 
