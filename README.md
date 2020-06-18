@@ -44,4 +44,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Disclaimer
 
-This is a personal project for CS5610 Web Development and the repository was migrated from GitHub Enterprise. For maintaining academic intergity, please do NOT reuse any code in this repository if you are working on your project for a related course.
+This is a personal project for CS5610 Web Development and the repository was migrated from GitHub Enterprise. For maintaining academic integrity, please do NOT reuse any code in this repository if you are working on your project for a related course.
