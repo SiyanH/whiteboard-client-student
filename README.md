@@ -10,7 +10,7 @@ You can test this app by either visiting the [live demo](https://wbdv-sp20-siyan
 
 *Please note that the live demo may take few minutes to start when you visit it.*
 
-RESTful web services were built on a [Node.js server](https://github.com/SiyanH/whiteboard-server-node) for the client to retrieve courses created by faculty. A generic server was also used to provide some of the web services for learning purpose. 
+RESTful web services were built on a [Node.js server](https://github.com/SiyanH/whiteboard-server-node) for the client to retrieve courses and quizzes. A generic server was also used to provide some of the web services for learning purpose. 
 
 *Please note that only courses added using the [faculty client](https://github.com/SiyanH/whiteboard-client-faculty) or the RESTFul APIs will be shown in the course list.*
 
