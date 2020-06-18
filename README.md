@@ -1,6 +1,6 @@
 # Whiteboard Client - Student
 
-This is a Angular client for the Whiteboard web app. It is built for student to see their courses and take quizzes.
+This is a Angular client for the Whiteboard web app. It is built for student to see their courses and take quizzes. The client for faculty is in another repository: [whiteboard-client-faculty](https://github.com/SiyanH/whiteboard-client-faculty).
 
 Whiteboard is a simple learning management platform where faculty can create courses and learning materials for students with various types of widgets, and students can take, submit and get scores for quizzes.
 
