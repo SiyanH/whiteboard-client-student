@@ -4,6 +4,10 @@ This is a Angular client for the Whiteboard web app. It is built for student to 
 
 Whiteboard is a simple learning management platform where faculty can create courses and learning materials for students with various types of widgets, and students can take, submit and get scores for quizzes.
 
+![Course List](pics/course.png)
+
+![Quiz](pics/quiz.png)
+
 ## Test
 
 You can test this app by either visiting the [live demo](https://wbdv-sp20-siyan-client-angular.herokuapp.com/) hosted on Heroku or running the code on your local machine.
